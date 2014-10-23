@@ -1,5 +1,5 @@
 (ns bowling-tests
-  (:use bowling clojure.test test-helper))
+  (:use bowling clojure.test))
 
 (deftest sum-first-test
   (is (= 0 (sum-first 0 [1 2 3 4 5])))
@@ -49,3 +49,5 @@
   (is (= 133 (score [1, 4, 4, 5, 6, 4, 5, 5, 10, 0, 1, 7, 3, 6, 4, 10, 2, 8, 6])))
   (is (= 149 (score [1, 4, 4, 5, 6, 4, 5, 5, 10, 0, 1, 7, 3, 6, 4, 10, 10, 8, 6])))
   (is (= 300 (score [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]))))
+
+(run-tests 'bowling-tests)
